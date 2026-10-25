@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rkalinow.pl</title>
+<meta name="description" content="Moje strony i narzędzia.">
+<style>
+  :root{
+    color-scheme:dark;
+    --bg:#0b1220;
+    --panel:#1f2937;
+    --panel-hover:#273449;
+    --line:#374151;
+    --text:#e5e7eb;
+    --muted:#9ca3af;
+    --accent:#2563eb;
+    --link:#60a5fa;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;min-height:100vh;
+    background:var(--bg);color:var(--text);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    line-height:1.5;
+    padding:56px max(16px, env(safe-area-inset-left)) 40px max(16px, env(safe-area-inset-right));
+  }
+  main{max-width:880px;margin:0 auto}
+  header{margin-bottom:32px}
+  h1{font-size:28px;font-weight:700;letter-spacing:-.01em;margin:0 0 6px}
+  header p{margin:0;color:var(--muted);font-size:15px}
+
+  .links{
+    display:grid;gap:14px;
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+    list-style:none;margin:0;padding:0;
+  }
+  .links a{
+    display:flex;flex-direction:column;gap:6px;height:100%;
+    padding:18px 18px 16px;
+    background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    color:inherit;text-decoration:none;
+    transition:background .15s,border-color .15s;
+  }
+  .links a:hover{background:var(--panel-hover);border-color:var(--accent)}
+  .links a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .name{font-size:18px;font-weight:600}
+  .desc{font-size:14px;color:var(--muted);flex:1}
+  .host{font-size:12px;color:var(--link);font-variant-numeric:tabular-nums;word-break:break-all}
+
+  footer{max-width:880px;margin:40px auto 0;font-size:12px;color:var(--muted)}
+  @media (max-width:480px){
+    body{padding-top:32px}
+    h1{font-size:24px}
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>rkalinow.pl</h1>
+    <p>Moje strony i narzędzia.</p>
+  </header>
+
+  <!-- Aby dodać stronę, skopiuj cały blok <li>…</li> i zmień adres, nazwę oraz opis. -->
+  <ul class="links">
+    <li>
+      <a href="https://pogoda.rkalinow.pl">
+        <span class="name">Pogoda</span>
+        <span class="desc">Wykres temperatury min / średniej / max dla Warszawy-Okęcia z danych IMGW.</span>
+        <span class="host">pogoda.rkalinow.pl</span>
+      </a>
+    </li>
+  </ul>
+</main>
+</body>
+</html>
